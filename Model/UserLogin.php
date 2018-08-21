@@ -7,7 +7,7 @@
         public $IdSystemUser;
         public $SystemUser;
         
-        __construct(){
+        public function__construct(){
             $this->Id = 0;
             $this->LoginName = "";
             $this->UserPassword = "";

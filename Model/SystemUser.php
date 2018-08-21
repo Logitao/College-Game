@@ -5,7 +5,7 @@
         public $Email;
         public $Score;
 
-        public __construct(){
+        public function __construct(){
             $this->Id = 0;
             $this->Username = "";
             $this->Email = "";
