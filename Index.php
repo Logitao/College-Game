@@ -1,4 +1,8 @@
 <?php
+    //Test
+    include "Model/Repositories/SystemUser.php";
+    $test = new SystemUser();
+    $test->InsertSystemUser();
 ?>
 
 <!DOCTYPE html>

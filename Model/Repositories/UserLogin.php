@@ -1,4 +1,5 @@
 <?php
+
     class UserLogin{
         public $Id;
         public $LoginName;
