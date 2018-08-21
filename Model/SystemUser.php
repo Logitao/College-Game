@@ -1,6 +1,6 @@
 <?php
     //Test
-    include "Model/Database.php";
+    include "Util/Database.php";
 
     class SystemUser{
         public $Id;
@@ -20,12 +20,12 @@
             $this->Database = new Database();
         }
 
-        //Test method
+        //Method to insert SystemUser into database
         public function InsertSystemUser(){
             $SqlQuery = "INSERT INTO SystemUser (
                 Username, Email, Score
             ) Values(
-              'igor', 'igor.carlos@gmail.com', '10'
+              {$this->Username}, {$this->Email}, {$this->Score}
             )";
             $this->Database->Query($SqlQuery);
         }
