@@ -22,8 +22,10 @@
 
         //Test method
         public function InsertSystemUser(){
-            $SqlQuery = "INSERT INTO SystemUser Values(
-               112, 'igor', 'igor.carlos@gmail.com', '10'
+            $SqlQuery = "INSERT INTO SystemUser (
+                Username, Email, Score
+            ) Values(
+              'igor', 'igor.carlos@gmail.com', '10'
             )";
             $this->Database->Query($SqlQuery);
         }
