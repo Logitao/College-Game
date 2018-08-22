@@ -15,3 +15,7 @@ Technologies used:
             ->Phaser
             ->AJAX
     ->Database: MySql
+    ->IDE: Visual Studio Code
+        ->Extensions:
+            ->php-debug
+            ->xdebug
