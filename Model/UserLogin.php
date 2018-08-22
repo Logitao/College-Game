@@ -1,43 +1,44 @@
 <?php
-
-    include_once "Util/Database.php";
+    include_once "Util/Database.php";//Once is extremely necessary in order to work together with other models
 
     class UserLogin{
-        public $Id;
-        public $LoginName;
-        public $UserPassword;
-        public $IsActive;
-        public $IdSystemUser;
-        public $SystemUser;
+        //Properties
+        public $id;
+        public $loginName;
+        public $userPassword;
+        public $isActive;
+        public $idSystemUser;
+        public $systemUser;
 
         //Database property
-        private $Database;
+        private $database;
 
+        //Constructor
         public function __construct(){
-            $this->Id = 0;
-            $this->LoginName = "";
-            $this->UserPassword = "";
-            $this->IsActive = false;
-            $this->IdSystemUser = 0;
-            $this->SystemUser = null;
+            $this->id = 0;
+            $this->loginName = "";
+            $this->userPassword = "";
+            $this->isActive = false;
+            $this->idSystemUser = 0;
+            $this->systemUser = null;
 
-            $this->Database = new Database();
+            $this->database = new Database();
         }
 
-        public function InsertUserLogin(){
-            $SqlQuery = "INSERT INTO UserLogin (
-                LoginName
-                , UserPassword
-                , IsActive
+        //Method to insert a userLogin into the database
+        public function insertUserLogin(){
+            $sqlQuery = "INSERT INTO userLogin (
+                loginName
+                , userPassword
+                , isActive
                 , idSystemUSer
             ) VALUES (
-                '{$this->LoginName}'
-                , '{$this->UserPassword}'
-                , {$this->IsActive}
-                , {$this->IdSystemUser}
+                '{$this->loginName}'
+                , '{$this->userPassword}'
+                , {$this->isActive}
+                , {$this->idSystemUser}
             )";
-            echo $SqlQuery;
-            $this->Database->Query($SqlQuery);
+            $this->database->query($sqlQuery);//Reusability
         }
     }
 ?>

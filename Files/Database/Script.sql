@@ -1,19 +1,20 @@
-CREATE DATABASE CollegeGame;
+CREATE DATABASE collegeGame;
 
-USE CollegeGame;
+USE collegeGame;
 
 CREATE TABLE SystemUser(
-	Id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    Username VARCHAR(255) NOT NULL,
-    Email VARCHAR(255) NOT NULL,
-    Score INT NOT NULL
+	id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    username VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    score INT NOT NULL,
+    isActive BOOL NOT NULL
 );
 
 CREATE TABLE UserLogin(
 	Id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
-    LoginName varchar(255) not null,
-    UserPassword varchar(255) not null,
-    IsActive BOOL NOT NULL,
+    loginName varchar(255) not null,
+    userPassword varchar(255) not null,
+    isActive BOOL NOT NULL,
     idSystemUser int not null,
     FOREIGN KEY (idSystemUser) REFERENCES SystemUser(id)
 );

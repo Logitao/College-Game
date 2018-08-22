@@ -1,27 +1,31 @@
 <?php
-
+    //Class that represents the database connection
     class database{
-        private $Server;
-        private $User;
-        private $Password;
-        private $Database;
+        //Properties
+        private $server;
+        private $user;
+        private $password;
+        private $database;
 
+        //Constructor
         public function __construct(){
-            $this->Server = "127.0.0.1";
-            $this->User = "root";
-            $this->Password = "1234";
-            $this->Database = "collegegame";
+            $this->server = "127.0.0.1";
+            $this->user = "root";
+            $this->password = "1234";
+            $this->database = "collegegame";
         }
 
-        private function Connect(){
-            $Connection = mysqli_connect($this->Server, $this->User, $this->Password, $this->Database);
-            return $Connection;
+        //Opening the connection with the database
+        private function connect(){
+            $connection = mysqli_connect($this->server, $this->user, $this->password, $this->database);
+            return $connection;
         }
 
-        public function Query($SqlQuery){
-            $Connection = $this->Connect();
-            $Result = mysqli_query($Connection, $SqlQuery);
-            return $Result;
+        //Executing SQL statement
+        public function query($sqlQuery){
+            $connection = $this->connect();
+            $result = mysqli_query($connection, $sqlQuery);
+            return $result;//Only used if you need database return
         }
     }
 

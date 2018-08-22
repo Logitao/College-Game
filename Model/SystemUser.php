@@ -1,36 +1,39 @@
 <?php
-    include_once "Util/Database.php";
+    include_once "Util/Database.php";//Once is extremely necessary in order to work together with other models
 
+    //SystemUser database representation
     class SystemUser{
-        public $Id;
-        public $Username;
-        public $Email;
-        public $Score;
+        //Properties
+        public $id;
+        public $username;
+        public $email;
+        public $score;
 
         //Database Property
-        private $Database;
+        private $database;
 
+        //Constructor
         public function __construct(){
-            $this->Id = 0;
-            $this->Username = "";
-            $this->Email = "";
-            $this->Score = 0;
+            $this->id = 0;
+            $this->username = "";
+            $this->email = "";
+            $this->score = 0;
 
-            $this->Database = new Database();
+            $this->database = new Database();
         }
 
         //Method to insert SystemUser into database
-        public function InsertSystemUser(){
-            $SqlQuery = "INSERT INTO SystemUser (
-                Username
-                , Email
-                , Score
+        public function insertSystemUser(){
+            $sqlQuery = "INSERT INTO systemUser (
+                username
+                , email
+                , score
             ) Values(
-                '{$this->Username}'
-                , '{$this->Email}'
-                , {$this->Score}
+                '{$this->username}'
+                , '{$this->email}'
+                , {$this->score}
             )";
-            $this->Database->Query($SqlQuery);
+            $this->database->query($sqlQuery);//Reusability
         }
     }
 ?>
