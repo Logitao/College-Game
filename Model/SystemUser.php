@@ -1,6 +1,5 @@
 <?php
-    //Test
-    include "Util/Database.php";
+    include_once "Util/Database.php";
 
     class SystemUser{
         public $Id;
@@ -8,7 +7,7 @@
         public $Email;
         public $Score;
 
-        //Database Variable
+        //Database Property
         private $Database;
 
         public function __construct(){
@@ -23,9 +22,13 @@
         //Method to insert SystemUser into database
         public function InsertSystemUser(){
             $SqlQuery = "INSERT INTO SystemUser (
-                Username, Email, Score
+                Username
+                , Email
+                , Score
             ) Values(
-              {$this->Username}, {$this->Email}, {$this->Score}
+                '{$this->Username}'
+                , '{$this->Email}'
+                , {$this->Score}
             )";
             $this->Database->Query($SqlQuery);
         }

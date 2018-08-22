@@ -14,6 +14,7 @@
     $testT->UserPassword = "passwordTest";
     $testT->IsActive = true;
     $testT->IdSystemUser = 1;
+    $testT->InsertUserLogin();
 ?>
 
 <!DOCTYPE html>
