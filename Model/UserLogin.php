@@ -41,10 +41,12 @@
             $this->database->query($sqlQuery);//Reusability
         }
 
-        //Method to get all UserLogins from database
-        public function getUsersLogin($isActive){
+        //Method to get UserLogin from database
+        public function getUserLogin($loginName, $userPassword){
             $sqlQuery = "SELECT * FROM userLogin
-                        WHERE isActive = {$isActive}";
+                        WHERE isActive = true
+                        AND loginName = '{$loginName}'
+                        AND userPassword = '{$userPassword}'";
 
             $systemUserData = $this->database->query($sqlQuery);//Collection from database
             $result = array();
@@ -55,5 +57,6 @@
             //result is basically all the rows grouped to simplify the return statement
             return $result; //Each index from the result represents a database row
         }
+
     }
 ?>

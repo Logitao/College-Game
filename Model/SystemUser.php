@@ -38,10 +38,12 @@
             $this->database->query($sqlQuery);//Reusability
         }
 
-        //Method to get all SystemUsers from database
-        public function getSystemUsers($isActive){
+        //Method to get SystemUsers from database
+        public function getSystemUser($username, $email){
             $sqlQuery = "SELECT * FROM systemUser
-                        WHERE isActive = {$isActive}";
+                        WHERE isActive = true
+                        AND username = '{$username}'
+                        AND email = '{$email}'";
 
             $systemUserData = $this->database->query($sqlQuery);//Collection from database
             $result = array();
