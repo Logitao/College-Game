@@ -11,7 +11,7 @@ CREATE TABLE SystemUser(
 );
 
 CREATE TABLE UserLogin(
-	Id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     loginName varchar(255) not null,
     userPassword varchar(255) not null,
     isActive BOOL NOT NULL,

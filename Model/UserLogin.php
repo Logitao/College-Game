@@ -40,5 +40,20 @@
             )";
             $this->database->query($sqlQuery);//Reusability
         }
+
+        //Method to get all UserLogins from database
+        public function getUsersLogin($isActive){
+            $sqlQuery = "SELECT * FROM userLogin
+                        WHERE isActive = {$isActive}";
+
+            $systemUserData = $this->database->query($sqlQuery);//Collection from database
+            $result = array();
+
+            while($row = mysqli_fetch_object($systemUserData)){//Row receives a row from database collection
+                array_push($result, $row);//result add the row
+            }
+            //result is basically all the rows grouped to simplify the return statement
+            return $result; //Each index from the result represents a database row
+        }
     }
 ?>

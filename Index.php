@@ -1,13 +1,6 @@
 <?php
     include "Model/SystemUser.php";
     include "Model/UserLogin.php";
-
-    $userLogin = new UserLogin();
-    $userLogin->loginName = "t";
-    $userLogin->userPassword = "t";
-    $userLogin->isActive = true;
-    $userLogin->idSystemUser = 1;
-    $userLogin->insertUserLogin();
 ?>
 
 <!DOCTYPE html>
