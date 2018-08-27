@@ -6,6 +6,7 @@
         public $id;
         public $loginName;
         public $userPassword;
+        public $keyWord;
         public $isActive;
         public $idSystemUser;
         public $systemUser;
@@ -18,6 +19,7 @@
             $this->id = 0;
             $this->loginName = "";
             $this->userPassword = "";
+            $this->keyWord = "";
             $this->isActive = false;
             $this->idSystemUser = 0;
             $this->systemUser = null;
@@ -30,11 +32,13 @@
             $sqlQuery = "INSERT INTO userLogin (
                 loginName
                 , userPassword
+                , keyWord
                 , isActive
                 , idSystemUSer
             ) VALUES (
                 '{$this->loginName}'
                 , '{$this->userPassword}'
+                , {$this->keyWord}
                 , {$this->isActive}
                 , {$this->idSystemUser}
             )";
@@ -56,6 +60,22 @@
             }
             //result is basically all the rows grouped to simplify the return statement
             return $result; //Each index from the result represents a database row
+        }
+
+        public function getUserLoginForgot($loginName, $keyWord){
+            $sqlQuery = "SELECT * FROM userLogin
+                        WHERE isActive = true
+                        AND loginName = '{$loginName}'
+                        AND keyWord = '{$keyWord}'";
+
+            $systemUserData = $this->database->query($sqlQuery);
+            $result = array();
+
+            while($row = mysqli_fetch_object($systemUserData)){
+                array_push($result, $row);
+            }
+            
+            return $result;
         }
 
     }
