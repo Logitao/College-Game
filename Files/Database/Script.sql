@@ -14,6 +14,7 @@ CREATE TABLE UserLogin(
 	id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     loginName varchar(255) not null,
     userPassword varchar(255) not null,
+    keyWord varchar(255) not null,
     isActive BOOL NOT NULL,
     idSystemUser int not null,
     FOREIGN KEY (idSystemUser) REFERENCES SystemUser(id)
