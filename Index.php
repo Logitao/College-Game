@@ -1,8 +1,6 @@
 <?php
     include_once "Controller/UserLoginController.php";
-
-    $teste = new UserLoginController();
-    $teste->SignIn("dsf", "sda");
+    
 ?>
 
 <!DOCTYPE html>

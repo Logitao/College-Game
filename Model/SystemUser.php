@@ -24,16 +24,17 @@
         }
 
         //Method to insert SystemUser into database
-        public function insertSystemUser(){
+        public function insertSystemUser($username, $email){
             $sqlQuery = "INSERT INTO systemUser (
                 username
                 , email
                 , score
+                , isActive
             ) Values(
-                '{$this->username}'
-                , '{$this->email}'
-                , {$this->score}
-                , {$this->isActive}
+                '{$username}'
+                , '{$email}'
+                , 0
+                , true
             )";
             $this->database->query($sqlQuery);//Reusability
         }

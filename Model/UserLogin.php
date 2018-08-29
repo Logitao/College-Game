@@ -28,19 +28,19 @@
         }
 
         //Method to insert a userLogin into the database
-        public function insertUserLogin(){
+        public function insertUserLogin($loginName, $userPassword, $keyWord, $idSystemUser){
             $sqlQuery = "INSERT INTO userLogin (
                 loginName
                 , userPassword
                 , keyWord
                 , isActive
-                , idSystemUSer
+                , idSystemUser
             ) VALUES (
-                '{$this->loginName}'
-                , '{$this->userPassword}'
-                , {$this->keyWord}
-                , {$this->isActive}
-                , {$this->idSystemUser}
+                '{$loginName}'
+                , '{$userPassword}'
+                , '{$keyWord}'
+                , true
+                , {$idSystemUser}
             )";
             $this->database->query($sqlQuery);//Reusability
         }
