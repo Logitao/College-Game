@@ -1,0 +1,46 @@
+<?php
+    include "../Controller/UserLoginController.php";
+    
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Sign In Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="../CSS/SignInStyle.css"/>
+
+    <!--Bootstrap's CDN-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
+    <script type="text/script" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"> </script>
+    <script type="text/script" scr="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+
+</head>
+<body>
+    <section class="form-group row" id="Form-Container">
+        <form action="" method="POST" class="col-6" id="Form">
+            <header>
+                <legend class="text-center Form-Text Form-Text-Title">Formulário de Login</legend>
+            </header>
+                <fieldset>
+                    <label class="Form-Text"> Usuário: </label> 
+                    <input type="text" maxlength="50" placeholder="Usuário" class="form-control" name="username"/>
+                </fieldset>
+                <fieldset>    
+                    <label class="Form-Text"> Senha: </label>
+                    <input type="password" maxlength="50" placeholder="Senha" class="form-control" name="password"/>
+                </fieldset>
+                <fieldset class="Clean-Margin-Top">
+                    <input type="submit" value="Entrar" class="btn btn-success" class="form-control"/> 
+                    <input type="button" value="Cancelar" class="btn btn-danger" class="form-control"/>
+                </fieldset>
+                <footer class="Clean-Margin-Top">
+                    <span class="Form-Text"><a href="#">Esqueci minha senha</a></span>
+                    <span class="Form-Text"><a href="#">Cadastrar</a></span>
+                </footer>
+            </form>
+    </section>
+</body>
+</html>

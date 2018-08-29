@@ -1,6 +1,6 @@
 <?php
-    include_once "./Model/UserLogin.php";
-    include_once "./Model/SystemUser.php";
+    include_once "../Model/UserLogin.php";
+    include_once "../Model/SystemUser.php";
 
     class UserLoginController{
         

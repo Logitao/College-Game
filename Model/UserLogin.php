@@ -1,5 +1,5 @@
 <?php
-    include_once "Util/Database.php";//Once is extremely necessary in order to work together with other models
+    include_once "../Util/Database.php";//Once is extremely necessary in order to work together with other models
 
     class UserLogin{
         //Properties

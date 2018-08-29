@@ -1,0 +1,38 @@
+#Form{
+    border:1px solid black;
+    border-radius: 10px;
+}
+
+.Form-Text{
+    font-family:arial;
+    font-size:1em;
+    color:black;
+}
+
+.Form-Text-Title{
+    font-size:1.5em;
+    text-transform:uppercase;
+}
+
+.Clean-Margin-Top{
+    margin-top:3%;
+}
+
+form>footer{
+    position:relative;
+}
+
+form>footer>span>a{
+    display: inline-block;
+    text-decoration: none;
+}
+
+form>footer>span:first-of-type{
+    position: relative;
+    left:10%;
+}
+
+form>footer>span:last-of-type{
+    position: absolute;
+    right:10%;
+}
