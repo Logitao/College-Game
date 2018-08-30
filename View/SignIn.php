@@ -20,21 +20,21 @@
 </head>
 <body>
     <section class="form-group row" id="Form-Container">
-        <form action="" method="POST" class="col-6" id="Form">
+        <form action="" method="POST" class="col-4" id="Form">
             <header>
-                <legend class="text-center Form-Text Form-Text-Title">Formulário de Login</legend>
+                <legend class="text-center Form-Text Form-Text-Title">Login</legend>
             </header>
-                <fieldset>
-                    <label class="Form-Text"> Usuário: </label> 
+                <fieldset class="Clean-Margin-Top">
+                    <!-- <label class="Form-Text"> Usuário: </label>  -->
                     <input type="text" maxlength="50" placeholder="Usuário" class="form-control" name="username"/>
                 </fieldset>
-                <fieldset>    
-                    <label class="Form-Text"> Senha: </label>
+                <fieldset class="Clean-Margin-Top">    
+                    <!-- <label class="Form-Text"> Senha: </label> -->
                     <input type="password" maxlength="50" placeholder="Senha" class="form-control" name="password"/>
                 </fieldset>
                 <fieldset class="Clean-Margin-Top">
-                    <input type="submit" value="Entrar" class="btn btn-success" class="form-control"/> 
-                    <input type="button" value="Cancelar" class="btn btn-danger" class="form-control"/>
+                    <input type="submit" value="Entrar" class="btn btn-success Input-Size" class="form-control"/> 
+                    <input type="button" value="Cancelar" class="btn btn-danger Input-Size" class="form-control"/>
                 </fieldset>
                 <footer class="Clean-Margin-Top">
                     <span class="Form-Text"><a href="#">Esqueci minha senha</a></span>

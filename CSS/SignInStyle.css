@@ -1,6 +1,7 @@
 #Form{
-    border:1px solid black;
-    border-radius: 10px;
+    /* border:1px solid black;
+    border-radius: 10px; */
+    margin:10% auto;
 }
 
 .Form-Text{
@@ -15,24 +16,26 @@
 }
 
 .Clean-Margin-Top{
-    margin-top:3%;
+    margin-top:5%;
+}
+
+.Input-Size{
+    width:6em;
+}
+
+form>fieldset:last-of-type{
+    text-align: center;
+}
+
+form>fieldset:last-of-type input{
+    display:inline;
 }
 
 form>footer{
     position:relative;
 }
 
-form>footer>span>a{
-    display: inline-block;
-    text-decoration: none;
-}
-
-form>footer>span:first-of-type{
-    position: relative;
-    left:10%;
-}
-
 form>footer>span:last-of-type{
     position: absolute;
-    right:10%;
+    right:0;
 }
