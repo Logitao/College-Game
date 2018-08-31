@@ -10,7 +10,7 @@
     <title>Sign In Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="../CSS/SignInStyle.css"/>
+    <link rel="stylesheet" href="../CSS/Style.css"/>
 
     <!--Bootstrap's CDN-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
@@ -25,11 +25,9 @@
                 <legend class="text-center Form-Text Form-Text-Title">Login</legend>
             </header>
                 <fieldset class="Clean-Margin-Top">
-                    <!-- <label class="Form-Text"> Usuário: </label>  -->
-                    <input type="text" maxlength="50" placeholder="Usuário" class="form-control" name="username"/>
+                    <input type="text" maxlength="50" placeholder="Usuário" class="form-control" name="loginName"/>
                 </fieldset>
                 <fieldset class="Clean-Margin-Top">    
-                    <!-- <label class="Form-Text"> Senha: </label> -->
                     <input type="password" maxlength="50" placeholder="Senha" class="form-control" name="password"/>
                 </fieldset>
                 <fieldset class="Clean-Margin-Top">
