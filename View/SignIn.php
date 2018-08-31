@@ -18,7 +18,7 @@
     <script type="text/script" scr="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
 
 </head>
-<body>
+<body class="Container">
     <section class="form-group row" id="Form-Container">
         <form action="" method="POST" class="col-4" id="Form">
             <header>
