@@ -40,7 +40,7 @@
                     </button>
                 </fieldset>
                 <footer class="Clean-Margin-Top">
-                    <span class="Form-Text"><a href="ForgotPassword.php">Esqueci minha senha</a></span>
+                    <span class="Form-Text" ><a href="ForgotPassword.php">Esqueci minha senha</a></span>
                     <span class="Form-Text"><a href="SignUp.php">Cadastrar</a></span>
                 </footer>
             </form>
