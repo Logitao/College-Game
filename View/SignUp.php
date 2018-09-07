@@ -7,8 +7,9 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>Sign Up Page</title>
+    <title>Game - Sign Up Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="../Images/Fiap-Icon.ico"/>
 
     <link rel="stylesheet" href="../CSS/Style.css?<?php echo time()?>"/>
 
@@ -18,9 +19,9 @@
     <script type="text/script" scr="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
 
 </head>
-<body class="container">
+<body class="container-fluid">
     <section class="form-group row" id="Form-Container">
-        <form action="" method="POST" class="col-4" id="Form">
+        <form action="" method="POST" class="col-10 col-sm-6 col-md-8 col-xl-4" id="Form">
             <header>
                 <legend class="text-center Form-Text Form-Text-Title">Cadastro</legend>
             </header>

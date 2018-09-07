@@ -20,7 +20,7 @@
 </head>
 <body class="container">
     <section class="form-group row" id="Form-Container">
-        <form action="" method="POST" class="col-4" id="Form">
+        <form action="" method="POST" class="col-10 col-sm-6 col-md-8 col-xl-4" id="Form">
             <header>
                 <legend class="text-center Form-Text Form-Text-Title">Esqueci minha senha</legend>
             </header>

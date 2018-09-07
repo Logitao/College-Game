@@ -19,9 +19,9 @@
     <script type="text/script" scr="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
 
 </head>
-<body class="container">
+<body class="container-fluid">
     <section class="form-group row" id="Form-Container">
-        <form action="" method="POST"class ="col-4" id="Form">
+        <form action="" method="POST"class ="col-12 col-sm-6 col-md-8 col-xl-4" id="Form">
             <header>
                 <legend class="text-center Form-Text Form-Text-Title">Login</legend>
             </header>
@@ -39,9 +39,9 @@
                         <a href="SignIn.php" class="link-decoration">Voltar</a>
                     </button>
                 </fieldset>
-                <footer class="Clean-Margin-Top">
-                    <span class="Form-Text" ><a href="ForgotPassword.php">Esqueci minha senha</a></span>
-                    <span class="Form-Text"><a href="SignUp.php">Cadastrar</a></span>
+                <footer class="Clean-Margin-Top row">
+                    <span class="Form-Text col-6 col-sm-6" ><a href="ForgotPassword.php" class="link-decoration">Esqueci minha senha</a></span>
+                    <span class="Form-Text col-4 col-sm-4"><a href="SignUp.php" class="link-decoration">Cadastrar</a></span>
                 </footer>
             </form>
     </section>
