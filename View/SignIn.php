@@ -7,14 +7,15 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>Sign In Page</title>
+    <title>Game - Sign In Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Local CSS -->
     <link rel="stylesheet" href="../CSS/Style.css?<?php echo time()?>"/>
-
+    <link rel="shortcut icon" href="../Images/Fiap-Icon.ico"/>
     <!--Bootstrap's CDN-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
-    <script type="text/script" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"> </script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"/>
+    <script type="text/script" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <script type="text/script" scr="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
 
 </head>
@@ -25,16 +26,18 @@
                 <legend class="text-center Form-Text Form-Text-Title">Login</legend>
             </header>
                 <fieldset class="Clean-Margin-Top">
-                    <input type="text" maxlength="50" placeholder="Usuário" class="form-control" name="loginName"/>
+                    <input type="text" maxlength="50" placeholder="Usuário" class="form-control" name="loginName" required/>
                 </fieldset>
                 <fieldset class="Clean-Margin-Top">    
-                    <input type="password" maxlength="50" placeholder="Senha" class="form-control" name="keyword"/>
+                    <input type="password" maxlength="50" placeholder="Senha" class="form-control" name="userPassword" required/>
                 </fieldset>
-                <fieldset class="Clean-Margin-Top">
-                    <input type="submit" value="Entrar" class="btn btn-success Input-Size" class="form-control"/> 
+                <fieldset class="Clean-Margin-Top"> 
+                    <button type="submit" class="btn btn-success Input-Size" class="form-control" id="EnterElement">
+                        Entrar
+                    </button>
                     <button class="btn btn-danger Input-Size" class="form-control">
                         <a href="SignIn.php" class="link-decoration">Voltar</a>
-                    </button>                
+                    </button>
                 </fieldset>
                 <footer class="Clean-Margin-Top">
                     <span class="Form-Text"><a href="ForgotPassword.php">Esqueci minha senha</a></span>
