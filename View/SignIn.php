@@ -1,6 +1,5 @@
 <?php
     include "../Controller/UserLoginController.php";
-    
 ?>
 
 <!DOCTYPE html>
@@ -13,15 +12,27 @@
     <!-- Local CSS -->
     <link rel="stylesheet" href="../CSS/Style.css?<?php echo time()?>"/>
     <link rel="shortcut icon" href="../Images/Fiap-Icon.ico"/>
+
+    <!-- JQuery's CDN -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
     <!--Bootstrap's CDN-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"/>
     <script type="text/script" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     <script type="text/script" scr="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
 
+    <?php 
+        if(!isset($_SESSION["UserLoginController"]))
+            die();
+
+        $user = $_SESSION["UserLoginController"];
+        echo "<script type='text/javascript'>alert('$user');</script>";
+    ?>
+
 </head>
 <body class="container-fluid">
     <section class="form-group row" id="Form-Container">
-        <form action="" method="POST"class ="col-12 col-sm-6 col-md-8 col-xl-4" id="Form">
+        <form action="../Controller/UserLoginController.php" method="POST" class ="col-12 col-sm-6 col-md-8 col-xl-4" id="Form">
             <header>
                 <legend class="text-center Form-Text Form-Text-Title">Login</legend>
             </header>
@@ -32,7 +43,7 @@
                     <input type="password" maxlength="50" placeholder="Senha" class="form-control" name="userPassword" required/>
                 </fieldset>
                 <fieldset class="Clean-Margin-Top"> 
-                    <button type="submit" class="btn btn-success Input-Size" class="form-control" id="EnterElement">
+                    <button type="submit" class="btn btn-success Input-Size" class="form-control" id="EnterElement" name="EnterElement">
                         Entrar
                     </button>
                     <button class="btn btn-danger Input-Size" class="form-control">
@@ -45,5 +56,6 @@
                 </footer>
             </form>
     </section>
+    
 </body>
 </html>
